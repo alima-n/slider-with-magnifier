@@ -1,0 +1,79 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Magnifier Effect</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+  <script src="https://use.fontawesome.com/f4b7c59920.js"></script>
+
+</head>
+<body>
+	<div class = "container">
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur doloribus aliquid sint, sapiente maiores facere. Numquam pariatur cum repellat, nulla asperiores temporibus eos accusamus repudiandae ut fugiat quia voluptatum quas eaque, porro corrupti nihil et dolor, animi mollitia tenetur commodi reprehenderit reiciendis deserunt quo. Quidem similique in pariatur, dolorem, minus libero suscipit. Aut atque reiciendis, qui dolor nam veritatis sint magnam facere eaque, deleniti corporis illo velit nisi suscipit odit nesciunt voluptas, voluptatem quaerat provident officia eligendi natus laudantium nulla. Maiores obcaecati explicabo quas, pariatur temporibus officiis, at facilis possimus maxime distinctio eaque ipsam iste doloremque labore sequi repudiandae tempora.</p>
+
+  <div class="js-app">
+    <div class="slide-block"></div>
+  </div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur doloribus aliquid sint, sapiente maiores facere. Numquam pariatur cum repellat, nulla asperiores temporibus eos accusamus repudiandae ut fugiat quia voluptatum quas eaque, porro corrupti nihil et dolor, animi mollitia tenetur commodi reprehenderit reiciendis deserunt quo. Quidem similique in pariatur, dolorem, minus libero suscipit. Aut atque reiciendis, qui dolor nam veritatis sint magnam facere eaque, deleniti corporis illo velit nisi suscipit odit nesciunt voluptas, voluptatem quaerat provident officia eligendi natus laudantium nulla. Maiores obcaecati explicabo quas, pariatur temporibus officiis, at facilis possimus maxime distinctio eaque ipsam iste doloremque labore sequi repudiandae tempora.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur doloribus aliquid sint, sapiente maiores facere. Numquam pariatur cum repellat, nulla asperiores temporibus eos accusamus repudiandae ut fugiat quia voluptatum quas eaque, porro corrupti nihil et dolor, animi mollitia tenetur commodi reprehenderit reiciendis deserunt quo. Quidem similique in pariatur, dolorem, minus libero suscipit. Aut atque reiciendis, qui dolor nam veritatis sint magnam facere eaque, deleniti corporis illo velit nisi suscipit odit nesciunt voluptas, voluptatem quaerat provident officia eligendi natus laudantium nulla. Maiores obcaecati explicabo quas, pariatur temporibus officiis, at facilis possimus maxime distinctio eaque ipsam iste doloremque labore sequi repudiandae tempora. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur doloribus aliquid sint, sapiente maiores facere. Numquam pariatur cum repellat, nulla asperiores temporibus eos accusamus repudiandae ut fugiat quia voluptatum quas eaque, porro corrupti nihil et dolor, animi mollitia tenetur commodi reprehenderit reiciendis deserunt quo. Quidem similique in pariatur, dolorem, minus libero suscipit. Aut atque reiciendis, qui dolor nam veritatis sint magnam facere eaque, deleniti corporis illo velit nisi suscipit odit nesciunt voluptas, voluptatem quaerat provident officia eligendi natus laudantium nulla. Maiores obcaecati explicabo quas, pariatur temporibus officiis, at facilis possimus maxime distinctio eaque ipsam iste doloremque labore sequi repudiandae tempora.</p>
+
+	</div>
+
+	<script src="slider.js"></script>
+
+  <script>
+    const options = {
+          targetClass: 'js-app',
+          slideBlockClass: 'slide-block',
+          slideClass: 'slide',
+          imgs_prev: ['./img/01_prev.jpg', './img/02_prev.jpg', './img/03_prev.jpg'],
+          imgs: ['./img/01.jpg', './img/02.jpg', './img/03.jpg'],
+          animation: {
+              hasAnimation: true,
+              animationClass: 'fade'
+          },
+          controls: {
+              hasControls: true,
+              controlsClass: 'controls',
+              prevBtnClass: ['prev','fa','fa-arrow-left'],
+              nextBtnClass: ['next','fa','fa-arrow-right']
+          },
+          navDots: {
+              hasDots: true,
+              dotsClass: 'dots',
+              dot: '&middot;',
+              activeDotClass: 'active-dot'
+          },
+          autoplay: {
+              hasAutoplay: true,
+              timeout: 1500
+          }
+    };
+
+    let slider = new Slider(options);
+    slider.render();
+    slider.activate();
+    slider.autoplay();
+  </script>
+
+  <script src="magnifier.js"></script>
+
+  <script>
+    const data = {
+      targetClass: 'slide-block',
+      windowClass: 'magnified-window',
+      magnifierClass: 'magnifier'
+    };
+
+    let magnifier = new Magnifier(data);
+    magnifier.renderZoomWindow();
+    magnifier.setWindowPosition('right');
+    magnifier.activate();
+  </script>
+</body>
+</html>
