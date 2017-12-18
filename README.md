@@ -1,3 +1,3 @@
-# Image slider with magnifying effect
+# Image slider with a magnifying glass effect
 
-Pure JavaScript slider with magnifier effect 
+Pure JavaScript slider a magnifying glass effect
